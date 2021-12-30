@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+/* font-family: 'Kumbh Sans', sans-serif; */
+* {
+    font-family: 'Kumbh Sans', sans-serif;
+}
+:root {
+    box-sizing: border-box;
+    --Darkcyan: hsl(185, 75%, 39%);
+    --Verydarkdesaturatedblue: hsl(229, 23%, 23%);
+    --Darkgrayishblue: hsl(227, 10%, 46%);
+    --Darkgray: hsl(0, 0%, 59%);
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+.page {
+    display: grid;
+    place-items: center;
+    place-content: center;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--Darkcyan);
+    background-image: url(./images/bg-pattern-top.svg), url(./images/bg-pattern-bottom.svg);
+    background-position: bottom 49vh right 46vw, top 49vh left 48vw;
+    background-repeat: no-repeat;
+}
+
+.profile-card {
+    display: flex;
+    flex-flow: column nowrap;
+    text-align: center; 
+    border-radius: 15px;
+    background-color: white;
+    width: 100%;
+    max-width: 350px;
+    box-shadow: 0px 50px 100px -20px rgba(8, 70, 94, 0.504835);
+    overflow: hidden;
+}
+
+.header {
+    width: 100%;
+    display: grid;
+    grid-template-rows: 86px 54px 48px;
+    grid-template-columns: 1fr;
+    justify-items: center;
+}
+
+.header__pattern{
+    grid-row: 1/3;
+    grid-column: 1/2;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.header__profile-img {
+    overflow: hidden;
+    grid-row: 2/4;
+    grid-column: 1/2;
+    border-radius: 50%;
+    border: 5px solid hsl(0, 0%, 100%); 
+}
+
+/* Text */
+.profile-card__user-info {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.profile-card__name {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--Verydarkdesaturatedblue);
+    margin-bottom: 13px;
+}
+
+.profile-card__age {
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--Darkgrayishblue);
+    margin-left: 9px;
+}
+
+.profile-card__location {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--Darkgrayishblue);
+}
+
+.profile-card__divider {
+    border: none;
+    width: 100%;
+    height: 1px;
+    background-color: var(--Darkgray);
+    margin-bottom: 30px;
+}
+
+.profile-card__stats {
+    margin: 0 15px 0 15px;
+    text-align: start;
+    display: grid;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.stats__item {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--Verydarkdesaturatedblue);
+    grid-row: 1/3;
+    padding-bottom: 5px;
+}
+
+.stats__tags {
+    letter-spacing: 1.5px;
+    font-size: 11px;
+    font-weight: 400;
+    color: var(--Darkgrayishblue);
+    margin-bottom: 25px;
+}
